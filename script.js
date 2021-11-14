@@ -1,5 +1,7 @@
 
+const allColors = document.getElementsByClassName("color-single")
 const canvasEl = document.getElementById('canvas')
+const rangeEl = document.getElementById('range')
 
 const context = canvasEl.getContext("2d")
 canvasEl.width = 600
@@ -32,3 +34,17 @@ canvasEl.addEventListener('mousedown', startPainting)
 canvasEl.addEventListener('mouseup', stopPainting)
 canvasEl.addEventListener('mouseleave', stopPainting)
 
+
+const colorListener = (e) => {
+  console.log(e.target.style.backgroundColor)
+  context.strokeStyle=e.target.style.backgroundColor
+}
+Array.from(allColors).forEach(each=>{ 
+  each.addEventListener("click", colorListener)
+})
+
+const rangeInputHandler = (e) => {
+  console.log(e.target.value)
+  context.lineWidth=e.target.value
+}
+rangeEl.addEventListener("input", rangeInputHandler)
