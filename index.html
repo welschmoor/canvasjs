@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,27 @@
   <link rel="stylesheet" href="styles.css">
   <title>Canvas Test</title>
 </head>
+
+
 <body>
-  
+  <div class="mainsection">
+
+    <canvas id="canvas"></canvas>
+    <div class="color-palette">
+      <div class="color-single" style="background-color: black;"></div>
+      <div class="color-single" style="background-color: red;"></div>
+      <div class="color-single" style="background-color: blue;"></div>
+      <div class="color-single" style="background-color: yellow;"></div>
+    </div>
+  </div>
+
+  <div class="tools">
+    <button class="btn btn-fill">Fill</button>
+    <button class="btn btn-paint">Paint</button>
+    <input type="range" name="range" id="range" min="1" max="100" step="1" value="50">
+  </div>
   <script src="script.js"></script>
 </body>
+
+
 </html>

@@ -1,0 +1,93 @@
+@import "reset.css";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 125%;
+}
+
+body {
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainsection {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+}
+
+#canvas {
+  margin-top: 40px;
+  background-color: white;
+  box-shadow: 0px 0px 0px 5px rgb(163, 163, 163);
+  width: 600px;
+  height: 400px;
+  z-index: 2;
+  cursor:crosshair;
+}
+
+
+.color-palette {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-left: 15px;
+  background-color: white;
+  box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.103);
+  gap: 5px;
+  position: absolute;
+  right: -55px;
+
+}
+.color-single {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.144);
+  cursor: pointer;
+}
+
+
+
+
+.tools {
+  display: flex;
+
+  padding: 10px;
+  padding-top: 15px;
+  background-color: white;
+  box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.103);
+  gap: 25px;
+  width: 380px;
+}
+.btn {
+  background-color: white;
+  border: none;
+  box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.233);
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: rgb(181, 246, 255);
+
+}
+.btn:active {
+  transform: scale(0.94);
+}
+
+.btn-fill {
+
+}
+.btn-paint {
+
+}
