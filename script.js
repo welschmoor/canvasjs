@@ -7,6 +7,9 @@ const context = canvasEl.getContext("2d")
 canvasEl.width = 600
 canvasEl.height = 400
 
+context.fillStyle = "white"
+context.fillRect(0,0,canvasEl.width, canvasEl.height)
+
 context.strokeStyle="black";
 context.lineWidth=2;
 
