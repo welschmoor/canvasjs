@@ -29,10 +29,16 @@ const mouseMoveHandler = e => {
   }
 }
 
+
+const rightClickHandler = (e) => {
+  e.preventDefault()
+  console.log(e)
+}
 canvasEl.addEventListener('mousemove', mouseMoveHandler)
 canvasEl.addEventListener('mousedown', startPainting)
 canvasEl.addEventListener('mouseup', stopPainting)
 canvasEl.addEventListener('mouseleave', stopPainting)
+canvasEl.addEventListener('contextmenu', rightClickHandler)
 
 
 const colorListener = (e) => {
@@ -48,3 +54,15 @@ const rangeInputHandler = (e) => {
   context.lineWidth=e.target.value
 }
 rangeEl.addEventListener("input", rangeInputHandler)
+
+
+
+const saveHandler = () => {
+  const img = canvasEl.toDataURL()
+  const aEl = document.createElement("a")
+  aEl.href = img
+  aEl.download  = "newimage" // download is a-tag attribute
+  aEl.click() // faking a click to save file
+}
+const saveBtn = document.getElementById('btn-save')
+saveBtn.addEventListener("click", saveHandler)

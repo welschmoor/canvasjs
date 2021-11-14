@@ -88,6 +88,11 @@ body {
 .btn-fill {
 
 }
-.btn-paint {
+.btn-save {
+  font-weight: 600;
+  color: rgb(138, 138, 138);
+}
 
+#range {
+  width: 240px;
 }
